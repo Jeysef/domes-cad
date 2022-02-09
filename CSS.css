@@ -212,8 +212,10 @@ html {
 }
 .orders_wrapper {
     display: flex;
+    position: relative;
+    width: 80%;
     margin: 50px;
-    padding: 30px;
+    padding: 5rem;
     background-color: rgba(63, 56, 54, 0.227);
     box-shadow: 5px 5px;
 }
