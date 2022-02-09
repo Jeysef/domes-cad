@@ -12,7 +12,6 @@
     transform: scale(1.2);
     border-left: 2px solid rgb(131, 113, 56);
     color: rgb(131, 113, 56);
-    ;
 }
 
 li a {
@@ -189,7 +188,7 @@ html {
     letter-spacing: 2px;
 }
 
-.cena {
+.order_item_price {
     color: rgba(80, 63, 63, 0.952);
     font-size: 25px;
     font-style: inherit;
@@ -241,7 +240,7 @@ html {
         font-size: 15px;
     }
 
-    .nadpisorders_iteme {
+    .order_item_title {
         font-size: 24px;
     }
 }
@@ -262,7 +261,7 @@ html {
         max-width: 170px;
     }
 
-    .nadpisorders_iteme {
+    .order_item_title {
         font-size: 18px;
     }
 
