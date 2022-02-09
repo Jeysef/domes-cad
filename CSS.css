@@ -8,9 +8,9 @@ body {
 }
 body::-webkit-scrollbar {
     width: 12px;               /* width of the entire scrollbar */
-  }
-  
-  body::-webkit-scrollbar-track {
+}
+
+body::-webkit-scrollbar-track {
     background: rgb(48, 46, 43);        /* color of the tracking area */
   }
   
@@ -18,9 +18,75 @@ body::-webkit-scrollbar {
     background-color: rgb(177, 61, 61);    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
     border: 3px solid rgb(48, 46, 43);  /* creates padding around scroll thumb */
-  }
+}
 
+.navigation_wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    
+}
+.navigace {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    top: 0;
+    margin: 0px;
+    z-index: 3;
+    transition: background-color 0.2s;
+}
+.navigace:hover {
+    background-color: rgb(46, 46, 46);
+}
+.left_side_of_navigation {
+    display: flex;
+    flex-direction: row;
+}
+.logoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#logo {
+    /* position: absolute; */
+    margin: auto;
+    width: 70px;
+    display: flex;
+    margin-left: 25px;
+    margin-right: 25px;
+    transition: transform 200ms;
+}
+
+#logo:hover {
+    transform: scale(1.2);
+}
+
+.hlavninazev {
+    display: flex;
+    text-align: center;
+    letter-spacing: 15px;
+    /* word-spacing: 10px; */
+    text-shadow: 1px 1px;
+    font-style: oblique;
+    color: rgb(255, 255, 255);
+    /* margin-left: 120px; */
+}
+
+.hlavninazev:hover {
+    color: rgb(131, 113, 56);
+}
+.listNav {
+    display: none;
+    width: max-content;
+    list-style-type: none;
+    margin-top: 20px;
+    /* padding: 20px; */
+    /* overflow: hidden; */
+}
 .listAitem {
     float: right;
     border-left: 2px solid rgb(255, 255, 255);
@@ -47,62 +113,9 @@ li a {
     font-style: initial;
 }
 
-.navigace {
-    display: flex;
-    justify-content: space-between;
-    width: auto;
-    background-color: black;
-    position: -webkit-sticky;
-    position: relative;
-    top: 0;
-    margin: 0px;
-    z-index: 3;
-    transition: background-color 0.2s;
-}
-.navigace:hover {
-    background-color: rgb(46, 46, 46);
-}
-.listNav {
-    display: flex;
-    width: max-content;
-    list-style-type: none;
-    margin: 0;
-    padding: 20px;
-    overflow: hidden;
-}
 
-.logoWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-#logo {
-    position: absolute;
-    margin: auto;
-    width: 70px;
-    display: flex;
-    left: 25px;
-    transition: transform 200ms;
-}
 
-#logo:hover {
-    transform: scale(1.2);
-}
-
-.hlavninazev {
-    text-align: center;
-    letter-spacing: 15px;
-    word-spacing: 10px;
-    text-shadow: 1px 1px;
-    font-style: oblique;
-    color: rgb(255, 255, 255);
-    margin-left: 120px;
-}
-
-.hlavninazev:hover {
-    color: rgb(131, 113, 56);
-}
 
 #auto {
     display: block;
@@ -168,7 +181,7 @@ html {
     padding: 0px;
 }
 
-.prvnipolo {
+.navigation_wrapper {
     margin: 0px;
     padding: 0px;
 }
@@ -186,36 +199,38 @@ html {
     height: max-content;
 }
 .info_article{
+    box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     position: relative;
     width: 90%;
+    padding-left: 10%;
+    padding-right: 10%;
     height: max-content;
     /* border-top: 2px solid rgb(255, 0, 0);
     border-left: 2.5px solid rgb(255, 0, 0); */
     border-radius: .375rem;
     background-color: rgba(165, 162, 162, 0);
-    background-origin: border-box;
-    background-size: 60%;
-    background-repeat: no-repeat;
-    background-position: right center;
     margin: auto;
 }
+.info_article > img {
+    flex-shrink: 1;
+    position: relative;
+    align-self: center;
+    display: flex;
+    height: 200px;
+    margin-bottom: 10px;
+}
 #first_article {
+    flex-direction: column-reverse;
     margin-top: 8rem;
-    background-image: url(https://cdn.motor1.com/images/mgl/x6vAw/s3/2022-cadillac-ct4-v-blackwing.jpg);
 }
 #second_article {
-    background-image: url(https://cdn.motor1.com/images/mgl/x6vAw/s3/2022-cadillac-ct4-v-blackwing.jpg);
     background-position: left center;
 
 }
 .info_text {
-    width: 70%;
-
-    position: relative;
-
-    padding: 2rem;
-
+    width: fit-content;
     font-size: 27px;
     /* background-color: rgba(46, 36, 36, 0.349); */
     letter-spacing: 2px;
@@ -223,26 +238,16 @@ html {
 
 #short_info {
 
-    padding-right: 65%;
-    padding-left: 5%;
+    padding-right: 5%;
     word-wrap: normal;
-    position: relative;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-
-
     font-size: 27px;
     /* background-color: rgba(56, 48, 48, 0.596); */
     letter-spacing: 2px;
 }
 #short_info2 {
-    position: relative;
     word-wrap: normal;
-    padding-right: 5%;
-    padding-left: 65%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-
+    padding-left: 5%;
+    /* padding-left: 65%; */
     font-size: 27px;
     /* background-color: rgba(46, 36, 36, 0.349); */
     letter-spacing: 2px;
@@ -269,9 +274,9 @@ html {
     justify-content: space-between;
     position: relative;
     flex-direction: row;
-    width: 80%;
+    /* width: 80%; */
     margin: 50px;
-    padding: 5rem;
+    padding: 2rem;
     background-color: rgba(63, 56, 54, 0.227);
     box-shadow: 5px 5px slategray;
     scroll-behavior: smooth;
@@ -298,11 +303,11 @@ html {
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     min-width: 200px;
-
+    font-size: 10px;
     margin: auto;
     text-align: center;
     font-family: arial;
-    font-size: 20px;
+
     background-color: rgba(46, 36, 36, 0.349);
     letter-spacing: 2px;
     height: 400px;
@@ -337,36 +342,53 @@ html {
 }
 
 @media screen and (min-width: 481px) {
-    .hlavninazev {
-        /* display: none; */
+    .listNav {
+        display: flex;
     }
-
-    .table_of_models {
-        width: 90%;
-    }
-
     .orders_item {
-        max-width: 220px;
-        font-size: 15px;
+        width: 100px;
+        min-width: 100px;
+        font-size: 20px;
     }
+    
 
-    .orders_item2 {
-        max-width: 220px;
-        font-size: 15px;
-    }
-
+    
+    
     .order_item_title {
         font-size: 24px;
     }
 }
 
-/* 
-@media screen and (max-width: 600px) {
-    .table_of_models {
-        font-size: 18px;
+@media screen and (min-width: 1230px) {
+    .info_article{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 90%;
+        padding-left: 10%;
+        padding-right: 10%;
+        height: max-content;
+        /* border-top: 2px solid rgb(255, 0, 0);
+        border-left: 2.5px solid rgb(255, 0, 0); */
+        border-radius: .375rem;
+        background-color: rgba(165, 162, 162, 0);
+        margin: auto;
     }
-}
+    .info_article > img {
+        align-self: center;
+        display: inline-block;
+        height: 250px;
+        margin-bottom: 0;
 
+    }
+    #first_article {
+        flex-direction: row;
+    
+    }
+    
+} 
+/*  
 @media screen and (max-width: 570px) {
     .orders_item {
         max-width: 170px;
