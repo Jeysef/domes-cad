@@ -1,0 +1,398 @@
+
+.listAitem {
+        float: right;
+        border-left: 2px solid rgb(255, 255, 255);
+        transition: transform 200ms;
+}
+.listAitem:first-last {
+    border-left: none
+}
+.listAitem:hover {
+    transform: scale(1.2);
+    border-left: 2px solid rgb(131, 113, 56);
+    color:   rgb(131, 113, 56);;
+}
+li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-style: initial;
+}
+.navigace {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    background-color: black;
+    position: -webkit-sticky; 
+    position: relative;
+    top: 0;
+    margin: 0px;
+    z-index: 3;
+}
+.listNav {
+    display: flex;
+    width: max-content;
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+        
+}
+.logoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+#logo {
+    position: absolute;
+    margin:auto;
+    width: 70px;
+    display: flex;
+    left:  25px;
+    transition: transform 200ms;
+}
+#logo:hover {
+    transform: scale(1.2);
+}
+.hlavninazev {
+    text-align: center;
+    letter-spacing: 15px;
+    word-spacing: 10px;
+    text-shadow: 1px 1px;
+    font-style:oblique ;
+    color:rgb(255, 255, 255);
+    margin-left: 120px;
+
+}
+.hlavninazev:hover {
+    color: rgb(131, 113, 56);
+}
+#auto {
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    transition: transform .2s;
+    width: 85%;
+}
+.prvnitext {
+    padding: 20px;
+    border-right: 5px solid rgb(255, 0, 0);
+    border-left: 5px solid rgb(255, 0, 0);
+    font-size: 27px;
+    background-color: rgba(46, 36, 36, 0.349);
+    letter-spacing: 2px;
+}
+.tabulka {
+    border-collapse: collapse;
+    width: 50%;
+    height: 350px;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+}
+.nadpisy {
+    font-size: 20px;
+    letter-spacing: 2px;
+    background-color: rgba(255, 0, 0, 0.658);
+    font-size: 25px
+}
+.table, th, td {
+    border: 1px solid black;
+    border-style:inherit;
+    width: auto;
+}
+td {
+    background-color: rgba(46, 36, 36, 0.349);
+}
+tr {
+    height: 20px;
+}
+.decs {
+    font-style: inherit;
+    font-size: 20px;
+}
+.video {
+     right: 0;
+     bottom: 0;
+     width: 100% ;
+     z-index: 2;
+     position: relative;
+}
+body {
+    margin: 0px;
+}
+html {
+    height:min-content;
+    margin: 0px;
+    padding: 0px;
+
+}
+.prvnipolo {
+    margin: 0px;
+    padding: 0px;
+}
+#auto:hover {
+    transform: scale(1.1);
+}
+.druhapolo {
+    margin:50px;
+    padding: 30px;
+    background-color:  rgba(63, 56, 54, 0.226);
+    box-shadow: 5px 5px;
+    display: flex;
+}
+.druhytext {
+    font-size: 27px;
+    background-color: rgba(46, 36, 36, 0.349);
+    letter-spacing: 2px;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 25px;
+}
+.prodej {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 490px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    font-size: 20px;
+    background-color: rgba(46, 36, 36, 0.349);
+    letter-spacing: 2px;
+  }
+  
+.cena {
+    color: rgba(80, 63, 63, 0.952);
+    font-size: 25px;
+    font-style: inherit;
+    font-weight: bold;
+  }
+  
+.prodej button {
+    border: none;
+    outline: 0;
+    padding: 14px;
+    color: white;
+    background-color: rgb(255, 0, 0);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+.prodej button:hover {
+    opacity: 0.7;
+  }
+.prodej2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    font-size: 20px;
+    background-color: rgba(46, 36, 36, 0.349);
+    letter-spacing: 2px;
+}
+.prodej2 button {
+    border: none;
+    outline: 0;
+    padding: 14px;
+    color: white;
+    background-color: rgb(255, 0, 0);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+.prodej2 button:hover {
+    opacity: 0.7;
+}
+.strankaprodej {
+    display: flex;
+    margin: 50px;
+    padding: 30px;
+    background-color: rgba(63, 56, 54, 0.227);
+    box-shadow: 5px 5px;
+}
+@media screen and (max-width: 1160px) {
+    .prodej {
+        max-width: 450px;
+    }
+    .prodej2 {
+        max-width: 450px;
+    }
+}
+@media screen and (max-width: 1073px) {
+    .prodej {
+        max-width: 400px;
+    }
+    .prodej2 {
+        max-width: 400px;
+    }
+}
+@media screen and (max-width: 979px) {
+    .prodej {
+        max-width: 350px;
+    }
+    .prodej2 {
+        max-width: 350px;
+    }
+}
+@media screen and (max-width: 871px) {
+    .prodej {
+        max-width: 300px;
+    }
+    .prodej2 {
+        max-width: 300px;
+    }
+}
+@media screen and (max-width: 775px) {
+    .prodej {
+        max-width: 250px;
+    }
+    .prodej2 {
+        max-width: 250px;
+    }
+    .nadpisprodeje {
+        font-size: 28px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .hlavninazev {
+        display: none;
+    }
+    
+    .tabulka {
+        width: 100%;
+    }
+    .prodej {
+        max-width: 220px;
+        font-size: 15px;
+    }
+    .prodej2 {
+        max-width: 220px;
+        font-size: 15px;
+    }
+    .nadpisprodeje {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 621px) {
+    .prodej {
+        max-width: 200px;
+    }
+    .prodej2 {
+        max-width: 200px;
+    }
+    .nadpisprodeje {
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .tabulka {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 570px) {
+    .prodej {
+        max-width: 170px;
+        }
+    .prodej2 {
+        max-width: 170px;
+        }
+    .nadpisprodeje {
+        font-size: 18px;
+        }
+    .druhapolo {
+        margin: 30px;
+        }   
+    .druhytext {
+       margin: 30px;
+        }
+    .strankaprodej {
+        padding: 20px;
+        margin: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+@media screen and (max-width: 467px) {
+    .listAitem {
+        font-size: 13px;
+    }
+    #logo {
+        width: 60px;
+    }
+    .druhapolo {
+        margin: 30px;
+    }
+    .druhytext {
+       margin: 30px;
+    }
+    .prodej {
+        max-width: 140px;
+        font-size: 12px;
+        }
+    .prodej2 {
+        max-width: 140px;
+        font-size: 12px;
+        }
+}
+@media screen and (max-width: 433px) {
+    #logo {
+        width: 55px;
+    }
+    li a {
+        padding: 15px 24px;
+    }
+    .druhytext {
+        margin: 30px;
+        font-size: 24px;
+    }
+    .druhapolo{
+        margin: 30px;
+        font-size: 20px;
+        padding: 0px;
+    }
+    .strankaprodej {
+        padding: 5px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+@media screen and (max-width: 378px) {
+    #logo {
+        width: 45px;
+    }
+    li a {
+        padding: 15px 20px;
+    }
+    .tabulka {
+        font-size: 15px;
+    }
+    th {
+        font-size: 20px; 
+    }
+}
+@media screen and (max-width: 359px) {
+    #logo {
+        width: 45px;
+    }
+    li a {
+        padding: 15px 18px;
+    }
+    .druhytext {
+        margin: 20px;
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 345px) {
+    #logo {
+        display: none;
+    }
+    li a {
+        padding: 15px 18px;
+    }
+}
