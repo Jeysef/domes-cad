@@ -338,7 +338,7 @@ html {
 
 @media screen and (min-width: 481px) {
     .hlavninazev {
-        display: none;
+        /* display: none; */
     }
 
     .table_of_models {
