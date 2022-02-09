@@ -1,3 +1,26 @@
+
+
+
+
+body {
+    scrollbar-width: auto;          /* "auto" or "thin" */
+    scrollbar-color: rgb(177, 61, 61) rgb(48, 46, 43);   /* scroll thumb and track */ 
+}
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(48, 46, 43);        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(177, 61, 61);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgb(48, 46, 43);  /* creates padding around scroll thumb */
+  }
+
+
 .listAitem {
     float: right;
     border-left: 2px solid rgb(255, 255, 255);
@@ -5,13 +28,14 @@
 }
 
 .listAitem:first-last {
-    border-left: none
+    border-left: none;
 }
 
 .listAitem:hover {
     transform: scale(1.2);
-    border-left: 2px solid rgb(131, 113, 56);
-    color: rgb(131, 113, 56);
+    --colour: rgb(146, 123, 46);
+    border-left: 2px solid var(--colour);
+    color: var(--colour);
 }
 
 li a {
@@ -33,8 +57,11 @@ li a {
     top: 0;
     margin: 0px;
     z-index: 3;
+    transition: background-color 0.2s;
 }
-
+.navigace:hover {
+    background-color: rgb(46, 46, 46);
+}
 .listNav {
     display: flex;
     width: max-content;
@@ -42,14 +69,12 @@ li a {
     margin: 0;
     padding: 20px;
     overflow: hidden;
-
 }
 
 .logoWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #logo {
@@ -73,7 +98,6 @@ li a {
     font-style: oblique;
     color: rgb(255, 255, 255);
     margin-left: 120px;
-
 }
 
 .hlavninazev:hover {
@@ -84,22 +108,13 @@ li a {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    transition: transform .2s;
+    transition: transform 0.2s;
     width: 85%;
 }
 
-.prvnitext {
-    padding: 20px;
-    border-right: 5px solid rgb(255, 0, 0);
-    border-left: 5px solid rgb(255, 0, 0);
-    font-size: 27px;
-    background-color: rgba(46, 36, 36, 0.349);
-    letter-spacing: 2px;
-}
-
-.tabulka {
+.table_of_models {
     border-collapse: collapse;
-    width: 50%;
+    width: 80%;
     height: 350px;
     font-size: 20px;
     text-align: center;
@@ -110,10 +125,12 @@ li a {
     font-size: 20px;
     letter-spacing: 2px;
     background-color: rgba(255, 0, 0, 0.658);
-    font-size: 25px
+    font-size: 25px;
 }
 
-.table, th, td {
+.table,
+th,
+td {
     border: 1px solid black;
     border-style: inherit;
     width: auto;
@@ -133,6 +150,7 @@ tr {
 }
 
 .video {
+    background-color: rgb(71, 71, 71);
     right: 0;
     bottom: 0;
     width: 100%;
@@ -148,7 +166,6 @@ html {
     height: min-content;
     margin: 0px;
     padding: 0px;
-
 }
 
 .prvnipolo {
@@ -159,6 +176,85 @@ html {
 #auto:hover {
     transform: scale(1.1);
 }
+.second_page_wrapper {
+    display: flex;
+    justify-content: center;
+    row-gap: 20px;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: max-content;
+}
+.info_article{
+    display: flex;
+    position: relative;
+    width: 90%;
+    height: max-content;
+    /* border-top: 2px solid rgb(255, 0, 0);
+    border-left: 2.5px solid rgb(255, 0, 0); */
+    border-radius: .375rem;
+    background-color: rgba(165, 162, 162, 0);
+    background-origin: border-box;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin: auto;
+}
+#first_article {
+    margin-top: 8rem;
+    background-image: url(https://cdn.motor1.com/images/mgl/x6vAw/s3/2022-cadillac-ct4-v-blackwing.jpg);
+}
+#second_article {
+    background-image: url(https://cdn.motor1.com/images/mgl/x6vAw/s3/2022-cadillac-ct4-v-blackwing.jpg);
+    background-position: left center;
+
+}
+.info_text {
+    width: 70%;
+
+    position: relative;
+
+    padding: 2rem;
+
+    font-size: 27px;
+    /* background-color: rgba(46, 36, 36, 0.349); */
+    letter-spacing: 2px;
+}
+
+#short_info {
+
+    padding-right: 65%;
+    padding-left: 5%;
+    word-wrap: normal;
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+
+    font-size: 27px;
+    /* background-color: rgba(56, 48, 48, 0.596); */
+    letter-spacing: 2px;
+}
+#short_info2 {
+    position: relative;
+    word-wrap: normal;
+    padding-right: 5%;
+    padding-left: 65%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    font-size: 27px;
+    /* background-color: rgba(46, 36, 36, 0.349); */
+    letter-spacing: 2px;
+}
+.info_text article {
+
+        background-color: rgba(56, 48, 48, 0.596);
+        border-radius: 1rem;
+        padding: 0.5rem;
+        box-shadow: 2px 2px 4px rgb(124, 126, 131);
+        width: 100%;
+}
 
 .druhapolo {
     margin: 50px;
@@ -168,24 +264,50 @@ html {
     display: flex;
 }
 
-.short_info {
-    font-size: 27px;
-    background-color: rgba(46, 36, 36, 0.349);
-    letter-spacing: 2px;
+.orders_wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    flex-direction: row;
+    width: 80%;
     margin: 50px;
-    padding: 20px;
-    border-radius: 25px;
+    padding: 5rem;
+    background-color: rgba(63, 56, 54, 0.227);
+    box-shadow: 5px 5px slategray;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    scrollbar-width: auto;          /* "auto" or "thin" */
+    scrollbar-color: rgb(177, 61, 61) rgb(48, 46, 43);   /* scroll thumb and track */ 
 }
-
+.orders_wrapper::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  .orders_wrapper::-webkit-scrollbar-track {
+    background: rgb(48, 46, 43);        /* color of the tracking area */
+  }
+  
+  .orders_wrapper::-webkit-scrollbar-thumb {
+    background-color: rgb(177, 61, 61);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgb(48, 46, 43);  /* creates padding around scroll thumb */
+  }
+  
 .orders_item {
+    display: inline-block;
+    position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 490px;
+    min-width: 200px;
+
     margin: auto;
     text-align: center;
     font-family: arial;
     font-size: 20px;
     background-color: rgba(46, 36, 36, 0.349);
     letter-spacing: 2px;
+    height: 400px;
+    margin-right: 50px;
+    /* margin: 50px; */
 }
 
 .order_item_price {
@@ -196,7 +318,10 @@ html {
 }
 
 .orders_item button {
+    position: absolute;
+    inset: auto auto 10px 0;
     border: none;
+    border-bottom: 2px black solid;
     outline: 0;
     padding: 14px;
     color: white;
@@ -210,26 +335,14 @@ html {
 .orders_item button:hover {
     opacity: 0.7;
 }
-.orders_wrapper {
-    display: flex;
-    position: relative;
-    width: 80%;
-    margin: 50px;
-    padding: 5rem;
-    background-color: rgba(63, 56, 54, 0.227);
-    box-shadow: 5px 5px;
-}
-
-
-
 
 @media screen and (min-width: 481px) {
     .hlavninazev {
         display: none;
     }
 
-    .tabulka {
-        width: 100%;
+    .table_of_models {
+        width: 90%;
     }
 
     .orders_item {
@@ -249,7 +362,7 @@ html {
 
 /* 
 @media screen and (max-width: 600px) {
-    .tabulka {
+    .table_of_models {
         font-size: 18px;
     }
 }
@@ -347,7 +460,7 @@ html {
         padding: 15px 20px;
     }
 
-    .tabulka {
+    .table_of_models {
         font-size: 15px;
     }
 
